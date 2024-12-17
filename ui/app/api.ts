@@ -1,4 +1,4 @@
-import { CreateItemPayload, Item, itemSchema } from "./types";
+import { PersistItemPayload, Item, itemSchema } from "./types";
 
 const BASE_URL = 'http://localhost:3333/api'
 
@@ -31,13 +31,27 @@ export const deleteItem = async (itemId: number): Promise<void> => {
   }
 }
 
-export const createItem = async (createItemPayload: CreateItemPayload): Promise<void> => {
+export const createItem = async (createItemPayload: PersistItemPayload): Promise<void> => {
   const response = await fetch(`${BASE_URL}/items`, {
     method: 'POST',
     headers: new Headers({
       'Content-Type': 'application/json',
     }),
     body: JSON.stringify(createItemPayload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error. Status code: ${response.status} - ${response.statusText}`)
+  }
+}
+
+export const updateItem = async (id: number, persistItemPayload: PersistItemPayload): Promise<void> => {
+  const response = await fetch(`${BASE_URL}/items/${id}`, {
+    method: 'PUT',
+    headers: new Headers({
+      'Content-Type': 'application/json',
+    }),
+    body: JSON.stringify(persistItemPayload)
   });
 
   if (!response.ok) {

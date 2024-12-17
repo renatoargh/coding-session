@@ -1,7 +1,3 @@
-
-
-
-
 export class IdProvider {
   private current: number = 1
 

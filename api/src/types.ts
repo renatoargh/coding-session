@@ -1,11 +1,11 @@
 import z from 'zod'
 
-export const createItemSchema = z.object({
+export const persistItemSchema = z.object({
   name: z.string(),
   description: z.string()
 })
 
-export type CreateItem = z.infer<typeof createItemSchema>
+export type CreateItem = z.infer<typeof persistItemSchema>
 
 export type Item = {
   id: number,

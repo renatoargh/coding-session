@@ -8,7 +8,7 @@ export const itemSchema = z.object({
 
 export type Item = z.infer<typeof itemSchema>
 
-export type CreateItemPayload = {
-  name: string,
+export type PersistItemPayload = {
+  name: string
   description: string
 }
