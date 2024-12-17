@@ -7,12 +7,6 @@ export const createItemSchema = z.object({
 
 export type CreateItem = z.infer<typeof createItemSchema>
 
-export const itemSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  description: z.string()
-})
-
 export type Item = {
   id: number,
   name: string,
