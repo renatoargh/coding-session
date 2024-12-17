@@ -49,7 +49,10 @@ export default function Home() {
           items.map(item => (
             <li key={item.id} className={styles.listItem}>
               <span className={styles.itemInfo}>
-                {item.name} - {item.description}
+              <span className={styles.itemInfo}>
+                <div><strong>{item.name}</strong></div>
+                <div><small>{item.description}</small></div>
+              </span>
               </span>
               <button 
                 onClick={() => handleDelete(item.id)}
