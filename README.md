@@ -2,15 +2,17 @@
 
 ## Instructions
 
-Clone the repo and run the following commands
+On the terminal, clone the repo and run the following commands to start the API server:
 
 ``` 
-# Starting the API
 cd ./api
 npm install
 npm start
+```
 
-# Starting the UI
+On another terminal tab, run the following command to start the user interface:
+
+```
 cd ../ui
 npm install
 npm run dev
