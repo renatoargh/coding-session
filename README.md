@@ -10,7 +10,7 @@ cd ./api
 npm install
 npm start
 
-# Starting the IO
+# Starting the UI
 cd ../ui
 npm install
 npm run dev
