@@ -18,7 +18,9 @@ npm install
 npm run dev
 ```
 
-Then go the `http://localhost:3000` on your browser
+Then go the `http://localhost:3000` on your browser and add some list items
+
+## UI Preview
 
 ![UI Example](./ui-example.jpeg)
 
