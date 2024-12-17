@@ -13,7 +13,7 @@ npm start
 On another terminal tab, run the following command to start the user interface:
 
 ```
-cd ../ui
+cd ./ui
 npm install
 npm run dev
 ```
