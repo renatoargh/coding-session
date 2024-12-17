@@ -10,6 +10,8 @@ npm install
 npm start
 ```
 
+The API server should have started on `http://localhost:3333`
+
 On another terminal tab, run the following command to start the user interface:
 
 ```
@@ -18,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Then go the `http://localhost:3000` on your browser and add some list items
+Then go `http://localhost:3000` on your browser and add some list items.
 
 ## UI Preview
 
