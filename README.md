@@ -1,6 +1,8 @@
-# Coding Session
+# Coding Session - TODO App
 
-## Instructions
+This project is created for educational purposes only. It is not intended to represent production-grade systems, and it may lack optimizations, security considerations, or best practices that are required for real-world applications.
+
+## How to Run It - Instructions
 
 On the terminal, clone the repo and run the following commands to start the API server:
 
