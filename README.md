@@ -17,3 +17,5 @@ npm run dev
 ```
 
 Then go the `http://localhost:3000` on your browser
+
+![UI Example](./ui-example.jpeg)
