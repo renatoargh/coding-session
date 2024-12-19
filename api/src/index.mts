@@ -1,7 +1,8 @@
+import z from 'zod'
 import express, { Request, Response } from 'express'
 import cors from 'cors'
 import { IdProvider } from './utils/id.utils.js'
-import { createItemSchema, Item, ItemsDb } from './types.js'
+import { persistItemSchema, Item, ItemsDb } from './types.js'
 
 const port = process.env.PORT || 3333
 const app = express()
@@ -17,9 +18,40 @@ app.get('/api/items', (_req: Request, res: Response) => {
   res.status(200).send(items)
 })
 
+app.put('/api/items/:id', (req, res) => {
+  const { id: rawId } = req.params
+  if (!rawId) {
+    return res.status(400).send({
+      message: 'Missing id',
+    })
+  }
+
+  const idParsing = z.coerce.number().safeParse(rawId)
+  if (idParsing.error) {
+    return res.status(400).send({
+      message: 'Invalid id',
+      details: idParsing.error.issues,
+    })    
+  }
+  
+  const bodyParsing = persistItemSchema.safeParse(req.body)
+  if (bodyParsing.error) {
+    return res.status(400).send({
+      message: 'Invalid payload',
+      details: bodyParsing.error.issues,
+    })
+  }
+
+  const id = idParsing.data
+  const item: Item = { id, ...bodyParsing.data }
+
+  db[id] = item
+
+  return res.status(200).send(item)
+})
+
 app.post('/api/items', (req, res) => {
-  console.log('body', typeof req.body, req.body)
-  const bodyParsing = createItemSchema.safeParse(req.body)
+  const bodyParsing = persistItemSchema.safeParse(req.body)
   if (bodyParsing.error) {
     return res.status(400).send({
       message: 'Invalid payload',
@@ -28,10 +60,7 @@ app.post('/api/items', (req, res) => {
   }
 
   const id = idProvider.getNext()
-  const item: Item = {
-    id,
-    ...bodyParsing.data
-  }
+  const item: Item = { id, ...bodyParsing.data }
 
   db[id] = item
 

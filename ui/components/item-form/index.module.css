@@ -1,0 +1,14 @@
+.formCard {
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 0.35rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.formCard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}

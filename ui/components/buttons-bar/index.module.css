@@ -1,0 +1,5 @@
+.buttonsBar {
+  display: flex;
+  justify-content: right;
+  gap: 0.5rem;
+}

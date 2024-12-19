@@ -1,6 +1,8 @@
-# Coding Session
+# Coding Session - TODO App
 
-## Instructions
+This project is created for educational purposes only. It is not intended to represent production-grade systems, and it may lack optimizations, security considerations, or best practices that are required for real-world applications.
+
+## How to Run It - Instructions
 
 On the terminal, clone the repo and run the following commands to start the API server:
 
@@ -12,7 +14,7 @@ npm start
 
 The API server should have started on `http://localhost:3333`
 
-On another terminal tab, run the following command to start the user interface:
+On another terminal tab, run the following commands to start the user interface:
 
 ```
 cd ./ui
@@ -20,7 +22,7 @@ npm install
 npm run dev
 ```
 
-Then go `http://localhost:3000` on your browser and add some list items.
+Then go to `http://localhost:3000` on your browser and add some list items.
 
 ## UI Preview
 
