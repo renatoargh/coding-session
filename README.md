@@ -12,7 +12,7 @@ npm install
 npm start
 ```
 
-The API server should have started on `http://localhost:3333`
+The API server should have started on `http://localhost:3333`.
 
 On another terminal tab, run the following commands to start the user interface:
 
@@ -22,7 +22,7 @@ npm install
 npm run dev
 ```
 
-Then go to `http://localhost:3000` on your browser and add some list items.
+Go to `http://localhost:3000` on your browser and add some list items.
 
 ## UI Preview
 
@@ -37,7 +37,11 @@ Then go to `http://localhost:3000` on your browser and add some list items.
    - Adds a new item.
    - Request Body: { "name": "string", "description": "string" }
 
-3. DELETE /api/items/:id
+3. PUT /api/items/:id
+   - Updated an existing item.
+   - Request Body: { "name": "string", "description": "string" }
+
+4. DELETE /api/items/:id
    - Deletes an item by its ID.
 
 Errors:
