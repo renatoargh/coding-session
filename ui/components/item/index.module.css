@@ -1,0 +1,27 @@
+.itemInfo {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.listItem {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectedItem {
+  background: #fdfdfd;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.listItem:hover {
+  background: #fdfdfd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
