@@ -45,7 +45,7 @@ export default function App() {
       <InfoBar 
         hidden={!items.length}
         left="Select an item below to start editing"
-        right={`${Pluralize.ITEM.getPrefixedString(items)} in your list`}
+        right={`There ${Pluralize.IS.getString(items)} ${Pluralize.ITEM.getPrefixedString(items)} on your list`}
       />
       <ItemsList
         selectedItemId={selectedItem?.id}

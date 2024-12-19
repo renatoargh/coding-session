@@ -22,6 +22,10 @@ export class Pluralize {
     return new Pluralize('item', 'items')
   }
 
+  static get IS(): Pluralize {
+    return new Pluralize('is', 'are')
+  }
+
   /**
    * Returns the appropriate string (singular, plural, or zero) based on the provided count.
    * 
