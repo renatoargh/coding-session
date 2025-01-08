@@ -87,5 +87,5 @@ app.delete('/api/items/:id', (req: Request, res: Response) => {
 })
 
 app.listen(port, () => {
-  console.log(`Coding challenge running on port ${port}`)
+  console.log(`Tasks app running on port ${port}`)
 })
