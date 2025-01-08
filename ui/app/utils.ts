@@ -55,6 +55,9 @@ export class Pluralize {
    * @param count - A number or an array. If an array is provided, its length will be used as the count.
    * @param ifZero - An optional string to use as the prefix if the count is zero.
    * @returns A string that combines the prefix and the result of `getString` method.
+   * @example getPrefixedString([], 'No') returns `No items`
+   * @example getPrefixedString(['a']) returns `1 item`
+   * @example getPrefixedString(['a', 'b']) returns `2 items`
    */
   getPrefixedString(
     count: number | Array<unknown>, 
